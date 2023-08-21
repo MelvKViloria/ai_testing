@@ -1,7 +1,9 @@
 import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 #importing data
-dataset_path = "C:\\Users\\GGPC\\Documents\\ai_learning\\Car_Purchasing_Data.xlsx"
+dataset_path = "C:\\Users\\GGPC\Documents\\ai_learning\\ai_testing\\Car_Purchasing_Data.xlsx"
 df = pd.read_excel(dataset_path)
 
 print()
@@ -33,3 +35,11 @@ print()
 #overall stats
 statistics = df.describe()
 print(statistics)
+
+# Create a histogram of the 'Age' column
+plt.figure(figsize=(8, 6))
+plt.hist(df['Age'], bins=20, color='blue', alpha=0.7)
+plt.xlabel('Age')
+plt.ylabel('Frequency')
+plt.title('Histogram of Age')
+plt.show()

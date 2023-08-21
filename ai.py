@@ -36,6 +36,8 @@ print()
 statistics = df.describe()
 print(statistics)
 
+
+
 # Create a histogram of the 'Age' column
 plt.figure(figsize=(8, 6))
 plt.hist(df['Age'], bins=20, color='blue', alpha=0.7)

@@ -38,13 +38,13 @@ print(statistics)
 
 
 
-# Create a histogram of the 'Age' column seaborn pairplot
+# Create a pairplot of the 'Age' column seaborn pairplot
 sns.pairplot(df, vars=['Age', 'Annual Salary'])
 plt.suptitle('Pair Plot of Age and Annual Salary', y=1.02)
 plt.show()
 
 
-# Create a histogram of the 'Age' column seaborn lineplot
+# Create a lineplot of the 'Age' column seaborn lineplot
 plt.figure(figsize=(10, 6))
 sns.lineplot(data=df, x='Age', y='Annual Salary', color='green', marker='o', markersize=6)
 plt.xlabel('Age')
@@ -53,9 +53,9 @@ plt.title('Line Plot of Age vs. Annual Salary')
 plt.grid(True)
 plt.show()
 
-# Create a histogram of the 'Age' column mattplot
+# Create a histogram of the 'Age' column seaborn
 plt.figure(figsize=(8, 6))
-plt.hist(df['Age'], bins=20, color='blue', alpha=0.7)
+sns.histplot(data=df, x='Age', bins=20, color='blue', alpha=0.7)
 plt.xlabel('Age')
 plt.ylabel('Frequency')
 plt.title('Histogram of Age')
